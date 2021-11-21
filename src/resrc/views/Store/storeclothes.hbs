@@ -1,0 +1,99 @@
+
+<nav class="navbar navbar-expand-lg navbar-black bg-black">
+    <div class="container">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+  ata-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+   aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#"></a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Tên sản phẩm</th>
+      <th scope="col">Mô tả</th>
+      <th scope="col">Giá tiền</th>
+      <th scope="col" colspan="2">Thời gian </th>
+     
+
+    </tr>
+  </thead>
+  <tbody>
+
+      {{#each Clothes}}
+            <tr>
+            <th scope="row">{{sum @index 1}}</th>
+            <td style="margin-left:5px ;">{{this.name}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.createdAt}}</td>
+            <td>
+                <a href= "/Clothe/{{this._id}}/edit" class="btn btn-link" style= "color: white; text-decoration: none">Sửa</a>
+                <a href= "#" class="btn btn-link" style= "color: white; text-decoration: none;"
+                data-toggle="modal" data-target="#Deleteitem" data-id="{{this._id}}">Xoá </a>
+            </td>
+            </tr>
+     {{/each}}
+  </tbody>
+</table>
+<!-- Modal -->
+<div class="modal fade" id="Deleteitem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xoá sản phẩm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Bạn chắc chắn muốn xoá sản phẩm này?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+        <button id ="btn-delete-item" type="button" class="btn btn-danger">Xoá sản phẩm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<form name="form-delete-item" method="POST"></form>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var ItemId;
+    var deleteForm = document.forms['form-delete-item'];
+    var btnDeleteItem = document.getElementById('btn-delete-item');
+
+
+    $('#Deleteitem').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      ItemId = button.data('id') 
+
+    })
+        btnDeleteItem.onclick = function() {
+        deleteForm.action = '/Clothe/' + ItemId +'?_method=DELETE';
+        deleteForm.submit();
+  }
+
+});
+</script>

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row" style="background-color: aqua; height:100px; align-items: center; justify-content:center;
+    font-size:40px;font-weight:bold">
+      CHỈNH SỬA SẢN PHẨM
+    </div>
+    <div class="container">
+        <form method="POST" action="/Clothe/{{clothe._id}}?_method=PUT">
+
+           <div class="form-group">
+                <label for="name" class="form-label" style="font-weight: 700; font-size:larger">Tên sản phẩm</label>
+                <input type="text" class="form-control"  value= "{{clothe.name}}" id="name" name="name" placeholder="Nhập tên sản phẩm...">
+             </div>
+               <div class="form-group">
+                <label for="Description" class="form-label"style="font-weight: 700; font-size:larger">Mô tả sản phẩm</label>
+                <textarea type="text" class="form-control" id="description" name="description" placeholder="Mô tả sản phẩm...">{{clothe.description}}</textarea>
+             </div> 
+                 <div class="form-group">
+                <label for="image" class="form-label"style="font-weight: 700; font-size:larger">Giá tiền</label>
+                <input type="text" class="form-control"  value= "{{clothe.price}}" id="price" name="price" placeholder="1000.000VND">
+                </div>
+              <div class="form-group">
+                <label for="image" class="form-label"style="font-weight: 700; font-size:larger">Ảnh sản phẩm</label>
+                <input type="text" class="form-control"  value= "{{clothe.image}}" id="image" name="image" placeholder="Image...">
+             </div>  
+           <div class="flex-btn-submit">
+            <button type="submit" class="btn-submit">Xác nhận</button>     
+           </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row" style="background-color: aqua; height:100px; align-items: center; justify-content:center;
+    font-size:40px;font-weight:bold">
+        THÊM SẢN PHẨM
+    </div>
+    <div class="container">
+        <form method="POST" action="/Girl/store">
+
+           <div class="form-group">
+                <label for="name" class="form-label" style="font-weight: 700; font-size:larger">Tên sản phẩm</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên sản phẩm...">
+             </div>
+               <div class="form-group">
+                <label for="Description" class="form-label"style="font-weight: 700; font-size:larger">Mô tả sản phẩm</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="Mô tả sản phẩm...">
+             </div> 
+              <div class="form-group">
+                <label for="image" class="form-label"style="font-weight: 700; font-size:larger">Giá tiền</label>
+                <input type="text" class="form-control" id="price" name="price" placeholder="1000.000VND">
+             </div>  
+              <div class="form-group">
+                <label for="image" class="form-label"style="font-weight: 700; font-size:larger">Ảnh sản phẩm</label>
+                <input type="text" class="form-control" id="image" name="image" placeholder="Image...">
+             </div>  
+           <div class="flex-btn-submit">
+            <button href="/" class="btn-submit btn-back" sytle="margin-right:20px">Trở về </button> 
+            <button type="submit" class="btn-submit">Xác nhận</button> 
+            
+           </div>
+        </form>
+    </div>
+</div>

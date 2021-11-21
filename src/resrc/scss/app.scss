@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sticky{
+    top: 0;
+
+}
+.background {
+    width:100%;
+    position: relative;
+}
+.background h1{
+display: block;
+width:100%;
+position: absolute;
+height:100%;
+background: rgb(2,0,36);
+z-index: 0;
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,93,9,1) 35%, rgba(0,212,255,1) 100%);
+}
+.col-md-3 {
+    padding-left: -10px;
+    max-width: 300px;
+}
+
+.col-md-9 {}
+li {
+    list-style: none;
+}
+a{ 
+    text-decoration: none;
+    color: white;
+}
+.slide {
+    width: 100%;
+}
+.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events {
+    height: 500px;
+}
+
+.swiper-slide.swiper-slide-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row .logo{
+    height: 200px;
+    width: 300px;
+    margin-left: 34px ;
+    
+}
+.search {
+    display: inline-block;
+    margin-left: 34px ;
+
+}
+.search  a img {
+    height:20px;
+    cursor: pointer;
+}
+.list-shop{
+    margin-top: 10px;  
+    margin-left: 34px ;
+    padding-right: 10px;
+}
+.option li {
+
+    display: block;
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    align-items: center;
+    width: 100%;
+     margin-left: -30px;
+}
+.option li:hover  {
+    text-decoration: underline;
+    background-color: #fff;
+    cursor: pointer;
+    color: red;
+    align-items: center;
+  
+}
+.option li:hover a {
+    color:#3abaae;
+}
+.option li a {
+    color: black;  
+    text-decoration: none;
+    width:100%;
+    padding-bottom: 10px;
+}
+.Products .col-sm-3 a >img { 
+    padding-left: 36px;
+
+
+}
+.telephone{
+    height:50px;
+    width:100px;
+    /* background-color: #3abaae; */
+    position: absolute;
+    left: 0;
+    align-items: center;
+    bottom: 100px;
+    display:inline-block;
+}
+.telephone div img {
+    height:50px;
+    width:50px;
+    padding-left: 50px;
+}
+.footer{
+    height: 370px;
+    background-color:black;
+    color:white;
+    width:101%;
+}
+.footer .buyonline{  
+    
+}
+.footer .buyonline h7, h6, h5{
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items:center;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+}
+.footer .hotline h7, h6, h5{
+    align-items:center;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+}
+.footer .Infor h5 ul li {
+    list-style: none;
+    text-decoration: none;
+    text-align-last: center;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    
+
+}
+.footer .col-sm-6 .Infor h5{
+    text-align-last: center;
+    left: 10px;
+}
+.footer .col-sm-6 .Infor .row .col-sm-6 li {
+    line-height:32px;
+}
+.footer .col-sm-6 .Infor .row {
+    padding-left: 44px;
+}
+.footer .row2 h6 {
+    text-align-last: left;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    visibility: hidden;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    visibility: hidden;
+}
+.Bounus .text-customer{
+    margin-right: 100px;
+}
+.EmailCustomer > input{
+    width: 300px;
+    margin-left: 30px;
+    height: 30px;
+}
+.PhoneCustomer >input {
+    width: 300px;
+    margin-left: 30px;
+    height: 30px;
+}
+.symbol{
+    display: flex;
+    justify-content: center;
+}
+.symbol .img {
+    width:30px;
+    height:30px;
+    background-color: black;
+    margin:10px;
+}
+.itemm2:hover {
+    display:block;
+}
+.flex-btn-submit{ 
+    display:flex;
+    justify-content:center;
+}
+.btn-submit{
+    margin-top: 30px;
+    width: 100px;
+    height:50px;
+    font-size: 20px;
+   
+}
+.hovera:hover {
+    text-decoration: underline;
+    color:firebrick;
+
+}
+.btn-back{
+    margin-right: 10px ;
+}

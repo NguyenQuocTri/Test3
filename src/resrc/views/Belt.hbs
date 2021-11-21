@@ -1,0 +1,193 @@
+   <div class="container" style="position:relative;">
+      <div class="row" style="width:100%; display: -webkit-inline-box">
+          <div class="col-xxl-3 col-xl-3" style="margin-bottom: -50px; background-color:#31b8e6; position: sticky; top:0 ;height:100vh;">
+              <div class="logo" style="position: sticky; top:0 ">
+                  <a href="http://localhost:3000/">
+
+                      <img src="../img/Ohmni.jpg" alt="Logo1" style="height:200px; margin-top: 10px;">
+                    </a>
+              </div>
+              <div class="search" style="padding-top:20px; position: sticky; top:200px">
+                  <input type="text" placeholder=" Tìm kiếm sản phẩm.." autocomplete="off">
+
+                  <a href="#">
+                    <img src="../img/search.png" alt="">
+                  </a>
+              </div>
+
+            <div class="list-shop" style="position: sticky; top:260px">
+                <ul class="option ">
+                    <li><a href="http://localhost:3000/Belt">       Belt</a></li>
+                    <li><a href="http://localhost:3000/Clothe">     Clothe</a></li>
+                    <li><a href="http://localhost:3000/Shoe">       Shoe</a></li>
+                    <li><a href="http://localhost:3000/Boy">      Boy</a></li>
+                    <li><a href="http://localhost:3000/Girl">      Girl</a></li>
+                    <li><a href="http://localhost:3000/Balo">      Balo</a></li>
+                    <li><a href="http://localhost:3000/Perfume">      Perfume</a></li>
+                    <li><a href="http://localhost:3000/Hat">      Hat</a></li>
+                </ul>  
+            </div>
+          </div>
+      
+        <div class="col-xxl-9 col-xl-9">
+            <div class="slide">
+                <div class="swiper">
+                <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+              </div>
+            <div style="margin:20px">
+                <div class="row">
+                    {{#each Belts}}
+                        <div class="col-lg-5 col-xl-4 col-xxl-4" style="margin-top: 20px">
+
+                            <div class="card" style="width: 18rem;">
+                                <a href="/Belt/{{this.slug}}">
+                                {{!-- <a href="/Belt/Beltdetail"> --}}
+                                   <img class="card-img-top" src="/img/BeltAdd.jpg" alt="{{this.image}}" style="width:100%;height:100%">
+                                   {{!-- <img class="card-img-top" src="{{this.image}}" alt="{{this.image}}"> --}}
+                                 </a> 
+                                <div class="card-body">
+                                      {{!-- <a href="/Belt/Beltdetail"> --}}
+                                      <a href="/Belt/{{this.slug}}" style="color:black">
+                                        <h5>{{this.name}}</h5>
+                                    </a>
+                                    <p style="text-align:center" font-size="25" font-weight="bold">{{this.price}}  VND</p>
+                                    <p class="card-text">{{this.description}}</p>
+                                    <div class="row" >
+                                        <div claass="col-lg-5" style="display:flex; justify-content:space-around">
+                                            <a href="/Belt/{{this.slug}}" class="btn btn-primary" style="width:45%;">Buy</a>
+                                            <a href="#" class="btn btn-primary" style="width:45%;">Map</a>
+                                         </div>
+
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    {{/each}}
+                    <div style="display:flex; justify-content: end; margin-top:10px;" >
+
+                        <a href="http://localhost:3000/Belt/Create" class="hovera"style="color:black">Thêm </a>
+                        <a href="#" class="disable" style="color:black; margin:0px 10px;">  /  </a>
+                        <a href="http://localhost:3000/Belt/storedbelt" class="hovera"style="color:black">Chỉnh sửa</a>
+                    </div>
+            </div>
+            </div>
+        <div class="footer">
+            <div class="row">
+
+                <div class="col-sm-3 contact">
+                    <div class="BuyOnline">
+                        <h5>MUA HÀNG TRỰC TUYẾN</h5>
+                        <h6>0900.xxx.xxx</h6>
+                        <h6>RobotOhmi@gmail.com</h6>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-3 Hotline">
+                    <div class="Hotline">
+                        <h5>HOTLINE</h5>
+                        <h6>0901.xxx.xxx</h6>
+                        <h6>RobotOhmi@gmail.com</h6>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6 Infor">
+                    <div class="Infor">
+                        <h5>Thông tin và chính sách cửa hàng</h5> 
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <li><a href="#"> Giới thiệu</a></li>
+                                <li><a href="#">Đối tác</a></li>
+                                <li><a href="#"> Chính sách bảo mật</a></li>
+                                <li><a href="#"> Chính sách bảo hành</a></li>
+                                
+                            </div>
+                            <div class="col-sm-6">
+                                <li><a href="#"> Tuyển dụng</a></li>
+                                <li><a href="#"> Thanh toán và vận chuyển</a></li>
+                                <li><a href="#"> Chính sách hoàn tiền</a></li>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+        <div class="row row2" style=" margin-top:28px">
+            <div class="col-sm-5 ">
+                <div class="Bonus">
+                     <h6 class="text-customer" > Ưu đãi khách hàng </h6>
+                         <div class ="EmailCustomer" style="display: inline-block">
+                        <input class ="input"type="text " placeholder="   Nhập Email của khách hàng" >
+                        <button value="Submit" style="  width:50px; height:31px; text-align:center;  background-color: lightgoldenrodyellow;" >Gửi</button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-5 ">
+                    <div class="Bonus">
+                         <h6 class="text-customer" > Kiểm tra hoá đơn của bạn </h6>
+                             <div class ="PhoneCustomer" style="display: inline-block">
+                            <input class ="input"type="text " placeholder="   Nhập Số điện thoại hoặc mã hoá đơn" >
+                            <button value="Submit" style="  width:50px; height:31px; text-align:center;  background-color: lightgoldenrodyellow;" >Gửi</button>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div style="border-top: 1px solid white; width:60%;margin-top:30px; margin-left: 20%;">
+            </div>
+            <div class="symbol">
+              <a href="">
+                    <img  class="img" src="../img/facebook-logo-2019.png" alt="">
+                </a>
+                <a href="">
+                    <img class="img" src="../img/twitter.png" alt="">
+                </a>
+            <a href="">
+                    <img class="img" src="../img/instagram.png" alt="">
+                </a>
+        
+             
+            </div>
+        </div>
+     </div>
+</div>
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+            const swiper = new Swiper('.swiper', {
+                // If we need pagination
+                pagination: {
+                el: '.swiper-pagination',
+                },
+            
+                // Navigation arrows
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+            
+                // And if we need scrollbar
+                scrollbar: {
+                el: '.swiper-scrollbar',
+                },
+            });
+
+    </script>
+   
